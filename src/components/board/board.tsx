@@ -24,9 +24,9 @@ const Board: FC<Props> = ({ table, loading }) => {
 
                         {loading ? "loading...." : table.map((highScore, index: number) => (
                             <tr key={index} className={`${index % 2 === 0 ? 'bg-blue-700' : 'bg-blue-900'} hover:bg-red-500 text-white`}>
-                                <td className='p-3 whitespace-nowrap'>{index + 1}</td>
-                                <td className='p-3 whitespace-nowrap'>{highScore.name}</td>
-                                <td className='p-3 whitespace-nowrap'>{highScore.score}</td>
+                                <td className='py-[0.6rem] whitespace-nowrap'>{index + 1}</td>
+                                <td className='py-[0.6rem] whitespace-nowrap'>{highScore.name}</td>
+                                <td className='py-[0.6rem] whitespace-nowrap'>{highScore.score}</td>
                             </tr>
 
                         ))}

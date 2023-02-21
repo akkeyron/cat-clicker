@@ -14,13 +14,14 @@ const api_endpoint = 'https://g1bme0lzz2.execute-api.ap-southeast-1.amazonaws.co
 
 const Win: FC<IProps> = ({ setState }) => {
     const nameRef = useRef<HTMLInputElement>(null);
+    const score = localStorage.getItem('score');
 
     // submit score
     const submitScore = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const name = nameRef.current?.value;
-        const score = localStorage.getItem('score');
+        
         localStorage.removeItem('score');
 
         if (name === undefined || name === null || score === undefined || score === null) {
@@ -47,6 +48,7 @@ const Win: FC<IProps> = ({ setState }) => {
     return (
         <div>
             <h1 className='text-4xl'>You Win!</h1>
+            <h2 className='text-2xl'>Score: {score}</h2>
             <form onSubmit={submitScore} className='flex flex-col justify-center text-center flex-wrap content-center'>
                 <input className='border-2 border-blue-500 rounded-full text-xl mt-8 mb-4 py-2 px-4'
                     ref={nameRef} type='text' placeholder='Enter your name' required />

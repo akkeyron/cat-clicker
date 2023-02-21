@@ -35,7 +35,10 @@ const App: FC = () => {
       />} */}
 
       {/* game */}
-      <Game lowScore='0' />
+      <div className='h-screen w-screen'>
+        <Game lowScore='0' />
+      </div>
+
 
       {/* leaderboard */}
       <div className='bg-slate-700 h-screen w-screen flex flex-col justify-center text-center'>

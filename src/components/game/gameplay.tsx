@@ -15,7 +15,7 @@ const Gameplay: FC<IProps> = ({ lowScore }) => {
   return (
     <section id='game'>
       <div className='w-[100vw] h-[100vh] flex flex-col content-center flex-wrap justify-center'>
-        <div ref={containerRef} className='flex flex-col justify-center text-center bg-blue-200 w-[95%] h-[95%] rounded-2xl'>
+        <div ref={containerRef} className='flex flex-col justify-center text-center bg-blue-200 w-[95%] h-[90%] rounded-2xl'>
           {/* start game */}
           {gameState === 'menu' && <Menu setState={setGameState} />}
 
