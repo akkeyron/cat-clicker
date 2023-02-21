@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply overflow-hidden;
+}
+
+::-webkit-scrollbar {
+  @apply hidden;
+}
