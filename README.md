@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Cat Clicker
 
 A mobile-friendly simple web clicker game with leaderboard.
 
