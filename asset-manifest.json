@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cat-clicker/static/css/main.b20ce6ad.css",
+    "main.js": "/cat-clicker/static/js/main.b3e8750b.js",
+    "static/media/default1.png": "/cat-clicker/static/media/default1.187b6ea81d9851d0a039.png",
+    "index.html": "/cat-clicker/index.html",
+    "main.b20ce6ad.css.map": "/cat-clicker/static/css/main.b20ce6ad.css.map",
+    "main.b3e8750b.js.map": "/cat-clicker/static/js/main.b3e8750b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b20ce6ad.css",
+    "static/js/main.b3e8750b.js"
+  ]
+}
