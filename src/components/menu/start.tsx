@@ -2,7 +2,7 @@ import React, { FC, useState, useRef, useEffect } from 'react'
 import catOpen from '../../assets/default1.png';
 
 // constant
-const START_TIME = 2;
+const START_TIME = 10;
 
 interface IProps {
     lowScore: string;
@@ -17,6 +17,7 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
 
     // refs
     const containerRef = useRef<HTMLDivElement>(null);
+    const catRef = useRef<HTMLDivElement>(null);
 
     // when click the cat
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -24,8 +25,12 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
 
 
         // Get the dimensions of the container div
-
         const container = containerRef.current;
+
+        // Get the dimensions of the cat image
+        const cat = catRef.current;
+        const catWidth = cat === null ? 0 : cat.offsetWidth;
+        const catHeight = cat === null ? 0 : cat.offsetHeight;
 
         // check if the container is null or undefined
         if (container === undefined || container === null) {
@@ -35,8 +40,8 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
         const containerWidth = container.offsetWidth;
         const containerHeight = container.offsetHeight;
         // Generate a random position for the button within the container div
-        const maxX = containerWidth - 153;
-        const maxY = containerHeight - 50;
+        const maxX = containerWidth - catWidth;
+        const maxY = containerHeight - catHeight;
         const newX = Math.floor(Math.random() * maxX);
         const newY = Math.floor(Math.random() * maxY);
 
@@ -79,7 +84,7 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
             </div>
 
             {/* this is the cat */}
-            <div onClick={handleClick} style={location} className='w-24 rounded-full absolute'>
+            <div ref={catRef} onClick={handleClick} style={location} className='w-24 rounded-full absolute'>
                 <img src={catOpen} />
             </div>
         </div>

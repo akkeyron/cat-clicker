@@ -5,7 +5,6 @@ import Board from './components/board/board';
 // import { useQuery } from 'react-query';
 // import axios from 'axios';
 // import { DynamoDB } from 'aws-sdk';
-import './App.css'
 import data from './data.js'
 
 // import data for testing
@@ -38,8 +37,8 @@ const App: FC = () => {
       {/* game */}
       <Game lowScore='0' />
 
-      {/* learderboard */}
-      <div className='bg-cyan-200 h-screen w-screen flex flex-col justify-center text-center'>
+      {/* leaderboard */}
+      <div className='bg-slate-700 h-screen w-screen flex flex-col justify-center text-center'>
         <Board table={highScores} loading={loading} />
       </div>
 
