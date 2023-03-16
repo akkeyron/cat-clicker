@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'sans': ['Inter', 'sans-serif'],
+      'serif': ['Merriweather', 'serif'],
+      'mono': ['"JetBrains Mono"', 'monospace'],
+    },
   },
   plugins: [],
 }

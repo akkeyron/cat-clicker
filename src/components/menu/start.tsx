@@ -78,9 +78,10 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
     return (
         <div ref={containerRef} className='w-full h-full'>
             {/* this is the score */}
-            <div className='flex flex-row justify-between'>
-                <div className='text-2xl font-bold'>Score: {score}</div>
-                <div className='text-2xl font-bold'>Time: {time}</div>
+            <div className='flex flex-row justify-center'>
+                <div className='text-2xl font-bold font-mono'>Score: {score}</div>
+                <p className='text-3xl font-bold font-mono'>||</p>
+                <div className='text-2xl font-bold font-mono'>Time: {time}</div>
             </div>
 
             {/* this is the cat */}

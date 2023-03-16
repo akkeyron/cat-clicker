@@ -7,13 +7,13 @@ interface IProps {
 const Menu:FC<IProps> = ({ setState }) => {
     return (
         <div className='flex flex-col justify-center text-center content-center flex-wrap'>
-            <h1 className='text-4xl font-bold mb-5'>Cat Clicker</h1>
-            <p className='mb-5'>Click the cat as many times as you can!</p>
-            <button onClick={() => { setState('start') }} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-xl'>
+            <h1 className='text-5xl font-extrabold mb-5 text-[#0c0c0f] '>Cat Clicker</h1>
+            <p className='mb-5 text-[#0c0c0f] font-mono text-lg'>Click the cat as many times as you can!</p>
+            <button onClick={() => { setState('start') }} className='bg-[#1A174F] hover:bg-[#0067A3] text-[#f9f4f4] font-bold py-2 px-4 rounded-full text-xl font-mono'>
                 Start
             </button>
 
-            <a href='#board' className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-xl'>Leaderboard</a>
+            <a href='#board' className='mt-4 bg-[#1A174F] hover:bg-[#0067A3] text-[#f9f4f4] font-bold py-2 px-4 rounded-full text-xl font-mono'>Leaderboard</a>
 
 
 

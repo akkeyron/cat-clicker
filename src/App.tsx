@@ -35,13 +35,13 @@ const App: FC = () => {
       />} */}
 
       {/* game */}
-      <div className='h-screen w-screen'>
+      <div className='h-[100dvh]'>
         <Game lowScore='0' />
       </div>
 
 
       {/* leaderboard */}
-      <div className='bg-slate-700 h-screen w-screen flex flex-col justify-center text-center'>
+      <div className='bg-[#008EAE] h-[100dvh]'>
         <Board table={highScores} loading={loading} />
       </div>
 

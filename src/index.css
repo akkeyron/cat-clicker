@@ -2,12 +2,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
+
 html {
   @apply scroll-smooth;
 }
 
 body {
   @apply overflow-hidden;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ::-webkit-scrollbar {
