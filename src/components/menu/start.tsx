@@ -1,6 +1,9 @@
 import React, { FC, useState, useRef, useEffect } from 'react'
 import catOpen from '../../assets/default1.png';
 
+// css
+import './menu.css'
+
 // constant
 const START_TIME = 10;
 
@@ -76,16 +79,15 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
 
 
     return (
-        <div ref={containerRef} className='w-full h-full'>
+        <div ref={containerRef} className='container-game'>
             {/* this is the score */}
-            <div className='flex flex-row justify-center'>
+            <div className='score-hud'>
                 <div className='text-2xl font-bold font-mono'>Score: {score}</div>
-                <p className='text-3xl font-bold font-mono'>||</p>
                 <div className='text-2xl font-bold font-mono'>Time: {time}</div>
             </div>
 
             {/* this is the cat */}
-            <div ref={catRef} onClick={handleClick} style={location} className='w-24 rounded-full absolute'>
+            <div ref={catRef} onClick={handleClick} style={location} className='cat'>
                 <img src={catOpen} />
             </div>
         </div>

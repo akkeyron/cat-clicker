@@ -64,7 +64,7 @@ const data = [
         "createdAt": "2023-02-11 04:27:33",
         "score": "6",
         "id": "ca05a265-fc77-42c4-96d0-4dcbac09a0d0",
-        "name": "niasu"
+        "name": "asdfh wekrj asd gksajdfk kewjt kewj"
     }
 ]
 

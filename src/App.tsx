@@ -1,11 +1,12 @@
-import { useState, useRef, FC } from 'react'
+import { useState, useRef, useEffect, FC } from 'react'
 import Game from './components/game/gameplay';
 import Board from './components/board/board';
 // import Menu from './components/Menu/Menu';
 // import { useQuery } from 'react-query';
 // import axios from 'axios';
 // import { DynamoDB } from 'aws-sdk';
-import data from './data.js'
+import data from './data.js';
+import './App.css';
 
 // import data for testing
 // import testdata from './data.js';
@@ -18,15 +19,49 @@ interface IData {
   score: string
 }
 
+type ScreenState = 'game' | 'board';
+
 const App: FC = () => {
   const [highScores, setHighScores] = useState(data);
   const [loading, setLoading] = useState<boolean>(false);
   const currentScore = useRef<string>('0');
   const tableLength = useRef<number>(0);
 
+  // state for current screen
+  const [screen, setScreen] = useState<'game' | 'board'>('game');
+
+  // refs
+  const gameRef = useRef<HTMLDivElement>(null);
+  const boardRef = useRef<HTMLDivElement>(null);
+
+  const toggleScreen = (input: ScreenState) => {
+    const main = document.querySelector('.screen-main');
+    const game = gameRef.current;
+    const board = boardRef.current;
+
+    if (!game || !board) return;
+
+    if (input === 'game') {
+      game.style.zIndex = '1';
+      board.style.zIndex = '0';
+      game?.classList.add('show');
+      board?.classList.remove('show');
+    } else {
+      game.style.zIndex = '0';
+      board.style.zIndex = '1';
+      game?.classList.remove('show');
+      board?.classList.add('show');
+    }
+
+    main?.classList.toggle('flipped');
+  }
+
+
+
   return (
-    <>
-      {/* {loading ? "" : <GamePlayer
+    <div className='main'>
+      <div className='screen-main'>
+        {/* {loading ? "" : <GamePlayer
         currentScore={currentScore.current}
       />}
       {loading ? "" : <Board
@@ -34,18 +69,19 @@ const App: FC = () => {
         loading={loading}
       />} */}
 
-      {/* game */}
-      <div className='h-[100dvh]'>
-        <Game lowScore='0' />
+        {/* game */}
+        <div className='screen game show' ref={gameRef}>
+          <Game lowScore='0' setScreen={toggleScreen} />
+        </div>
+
+        {/* leaderboard */}
+        <div className='screen board' ref={boardRef}>
+          <Board table={highScores} loading={loading} setScreen={toggleScreen} />
+        </div>
+
       </div>
+    </div>
 
-
-      {/* leaderboard */}
-      <div className='bg-[#008EAE] h-[100dvh]'>
-        <Board table={highScores} loading={loading} />
-      </div>
-
-    </>
   )
 }
 

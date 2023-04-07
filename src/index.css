@@ -1,18 +1,24 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
 
-html {
-  @apply scroll-smooth;
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-body {
-  @apply overflow-hidden;
-  font-family: 'Open Sans', sans-serif;
+:root {
+  --color-dark: hsl(0, 0%, 0%, 0.9);
+  --color-light: hsl(0, 0%, 100%, 0.9);
 }
 
-::-webkit-scrollbar {
-  @apply hidden;
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
 }

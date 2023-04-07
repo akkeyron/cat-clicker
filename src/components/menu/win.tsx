@@ -1,5 +1,8 @@
 import React, { FC, useEffect, useRef, useState } from 'react'
 
+// css
+import './menu.css';
+
 interface IProps {
     setState: (state: 'menu' | 'start' | 'win' | 'lose') => void;
 }
@@ -56,17 +59,17 @@ const Win: FC<IProps> = ({ setState }) => {
 
 
     return (
-        <div>
-            <h1 className='text-4xl font-bold font-mono'>You Win!</h1>
-            <h2 className='text-2xl font-mono'>Score: {score}</h2>
-            <form onSubmit={submitScore} className='flex flex-col justify-center text-center flex-wrap content-center'>
+        <div className='menu__div'>
+            <h1 className='title'>You Win!</h1>
+            <h2 className='sub-title'>Score: {score}</h2>
+            <form onSubmit={submitScore} className='menu__div'>
                 <input className='border-2 border-blue-500 rounded-full text-xl mt-8 mb-4 py-2 px-4 text-center font-mono'
                     ref={nameRef} type='text' placeholder='Enter your name' required />
 
-                <button className='bg-[#1A174F] hover:bg-blue-700 text-[#f9f4f4] font-bold py-2 px-4 mb-3 rounded-full text-xl font-mono'
+                <button className='btn'
                     type='submit'>Submit</button>
 
-                {replay && <button className='bg-[#1A174F] hover:bg-blue-700 text-[#f9f4f4] font-bold py-2 px-4 rounded-full text-xl font-mono'
+                {replay && <button className='btn'
                     type='button' onClick={() => setState('menu')}>Play Again</button>}
             </form>
         </div>

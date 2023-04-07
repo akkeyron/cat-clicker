@@ -1,19 +1,23 @@
 import React, { FC } from 'react'
 
+// css
+import './menu.css';
+
 interface IProps {
     setState: (state: 'menu' | 'start' | 'win' | 'lose') => void;
+    setScreen: (screen: 'game' | 'board') => void;
 }
 
-const Menu:FC<IProps> = ({ setState }) => {
+const Menu:FC<IProps> = ({ setState, setScreen }) => {
     return (
-        <div className='flex flex-col justify-center text-center content-center flex-wrap'>
-            <h1 className='text-5xl font-extrabold mb-5 text-[#0c0c0f] '>Cat Clicker</h1>
-            <p className='mb-5 text-[#0c0c0f] font-mono text-lg'>Click the cat as many times as you can!</p>
-            <button onClick={() => { setState('start') }} className='bg-[#1A174F] hover:bg-[#0067A3] text-[#f9f4f4] font-bold py-2 px-4 rounded-full text-xl font-mono'>
+        <div className='menu__div'>
+            <h1 className='title'>Cat Clicker</h1>
+            <p className='sub-title'>Click the cat as many times as you can!</p>
+            <a onClick={() => { setState('start') }} className='btn'>
                 Start
-            </button>
+            </a>
 
-            <a href='#board' className='mt-4 bg-[#1A174F] hover:bg-[#0067A3] text-[#f9f4f4] font-bold py-2 px-4 rounded-full text-xl font-mono'>Leaderboard</a>
+            <button type='button' onClick={() => setScreen("board")} className='btn secondary'>Leaderboard</button>
 
 
 
