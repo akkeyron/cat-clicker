@@ -90,7 +90,7 @@ const Start: FC<IProps> = ({ lowScore, setState }) => {
             <div ref={catRef} onClick={handleClick} style={location} className='cat'>
                 <img src={catOpen} />
             </div>
-            Hello Cat
+            Hello Dog
         </div>
     )
 }
