@@ -10,7 +10,7 @@ interface IProps {
 const Lose:FC<IProps> = ({ setState }) => {
   return (
     <div className='menu__div'>
-        <h1 className='title'>You Lose!</h1>
+        <h2 className='title'>You Lose!</h2>
         <button onClick={() => { setState('menu') }} className='btn'>
             Play Again
         </button>

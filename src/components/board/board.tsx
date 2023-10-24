@@ -13,15 +13,15 @@ interface Props {
 const Board: FC<Props> = ({ table, loading, setScreen }) => {
     return (
         // <section id="board" className='h-full flex flex-col justify-center content-center'>
-        <section id="board">
+        <section id="board" className='wrapper'>
             <div className='board__div'>
                 <h1 className='title'>Leaderboard</h1>
                 <table>
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th>Name</th>
-                            <th>Score</th>
+                            <th><h3>Rank</h3></th>
+                            <th><h3>Name</h3></th>
+                            <th><h3>Score</h3></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -3,18 +3,11 @@
 }
 
 .board__div {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    background: #008EAE;
-}
-
-table {
-    width: 100%;
-    padding-inline: 1em;
 }
 
 tr {
@@ -23,15 +16,12 @@ tr {
 }
 
 th {
-    font-size: 1.5em;
     font-weight: 600;
     padding: 1em;
 }
 
 td {
-    font-size: 1.2em;
-    font-weight: 400;
-    padding-block: 0.6em;
+    padding-block: 0.5em;
     text-align: center;
 }
 

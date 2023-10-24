@@ -1,6 +1,4 @@
 .menu__screen {
-    background: #00C4E6;
+    background: var(--accent);
     min-height: 100svh;
-    display: flex;
-    justify-content: center;
 }

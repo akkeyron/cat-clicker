@@ -12,10 +12,10 @@ const Menu:FC<IProps> = ({ setState, setScreen }) => {
     return (
         <div className='menu__div'>
             <h1 className='title'>Cat Clicker</h1>
-            <p className='sub-title'>Click the cat as many times as you can!</p>
-            <a onClick={() => { setState('start') }} className='btn'>
+            <h3 className='sub-title'>Click the cat as many times as you can!</h3>
+            <button onClick={() => { setState('start') }} className='btn'>
                 Start
-            </a>
+            </button>
 
             <button type='button' onClick={() => setScreen("board")} className='btn secondary'>Leaderboard</button>
 

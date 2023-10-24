@@ -1,39 +1,29 @@
 .menu__div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 1em;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; */
 }
 
 .title {
-    font-size: 3em;
-    line-height: 1;
-    font-weight: 800;
-    margin-bottom: 0.5em;
-    font-family: "JetBrains Mono", monospace;
-    color: #0c0c0f;
+    color: var(--text);
 }
 
 .sub-title {
-    font-size: 1.3em;
-    line-height: 1;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
     font-family: "JetBrains Mono", monospace;
     color: #0c0c0f;
 }
 
 .btn.secondary {
-    background-color: transparent;
-    outline: solid 2px #1A174F;
-    color: #1A174F;
-    font-weight: 700;
-    padding: 0.5em 1em;
-    border-radius: 3rem;
-    font-size: 1.25em;
-    font-family: "JetBrains Mono", monospace;
-    cursor: pointer;
+    background-color: var(--secondary-button);
+    outline: solid 2px var(--primary-button);
 }
 
 .btn.secondary:hover {
@@ -52,7 +42,7 @@
 }
 
 .cat img {
-    width: clamp(8rem, 20vw + 1rem, 11rem);
+    width: clamp(6rem, calc(1.32rem + 10vw), 8rem);
 }
 
 .score-hud {
@@ -66,7 +56,6 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-    font-size: 2em;
     font-family: "JetBrains Mono", monospace;
     color: #0c0c0f;
     border: 2px solid #0c0c0f;
@@ -75,7 +64,6 @@
 
 /* game wins */
 input {
-    font-size: 1.25em;
     font-family: "JetBrains Mono", monospace;
     color: #0c0c0f;
     border: 2px solid #3b82f6;
