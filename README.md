@@ -2,6 +2,8 @@
 
 A mobile-friendly simple web clicker game with leaderboard.
 
+https://akkeyron.github.io/cat-clicker/
+
 ## Technologies stack used
 
 ### Frontend
